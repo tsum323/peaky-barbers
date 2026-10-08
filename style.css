@@ -1,19 +1,156 @@
+/* FONTS (SIL Open Font License, see fonts/) */
+
+@font-face {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("fonts/playfair-display-cyrillic-500-normal.woff2") format("woff2");
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("fonts/playfair-display-latin-500-normal.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD, U+20BD;
+}
+
+@font-face {
+    font-family: "Playfair Display";
+    font-style: italic;
+    font-weight: 500;
+    font-display: swap;
+    src: url("fonts/playfair-display-cyrillic-500-italic.woff2") format("woff2");
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+    font-family: "Playfair Display";
+    font-style: italic;
+    font-weight: 500;
+    font-display: swap;
+    src: url("fonts/playfair-display-latin-500-italic.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD, U+20BD;
+}
+
+@font-face {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("fonts/playfair-display-cyrillic-600-normal.woff2") format("woff2");
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("fonts/playfair-display-latin-600-normal.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD, U+20BD;
+}
+
+@font-face {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("fonts/manrope-cyrillic-400-normal.woff2") format("woff2");
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("fonts/manrope-latin-400-normal.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD, U+20BD;
+}
+
+@font-face {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("fonts/manrope-cyrillic-500-normal.woff2") format("woff2");
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("fonts/manrope-latin-500-normal.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD, U+20BD;
+}
+
+@font-face {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("fonts/manrope-cyrillic-600-normal.woff2") format("woff2");
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("fonts/manrope-latin-600-normal.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD, U+20BD;
+}
+
+@font-face {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("fonts/manrope-cyrillic-700-normal.woff2") format("woff2");
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("fonts/manrope-latin-700-normal.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD, U+20BD;
+}
+
 :root {
-    --color-bg: #11100f;
-    --color-surface: #171614;
+    /* Тёплый «табачный» тёмный, как морёное дерево в зале */
+    --color-bg: #0e0c0a;
+    --color-surface: #17130f;
 
-    --color-text: #f3f0ea;
-    --color-white: #ffffff;
-    --color-text-soft: #aaa59e;
-    --color-text-muted: #959087;
-    --color-text-faint: #8a847c;
+    --color-text: #f2ece1;
+    --color-white: #fffaf2;
+    --color-text-soft: #b8ae9f;
+    --color-text-muted: #a0968a;
+    --color-text-faint: #948a7d;
 
-    --color-line: #292725;
-    --color-border: #302d29;
-    --color-border-strong: #3a3733;
-    --color-border-hover: #55514c;
+    /* Латунь — бритвы, фурнитура, 1920-е */
+    --color-accent: #c6a46a;
+    --color-accent-strong: #dcc08a;
+    --color-accent-soft: rgba(198, 164, 106, 0.12);
 
-    --placeholder-bg: linear-gradient(145deg, #2a2723, #171614);
+    --color-line: #241f19;
+    --color-border: #2f281f;
+    --color-border-strong: #3d3428;
+    --color-border-hover: #7a6440;
+
+    --placeholder-bg: linear-gradient(145deg, #2a231b, #14110d);
+
+    --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+    --font-body: "Manrope", "Helvetica Neue", Arial, sans-serif;
 }
 
 * {
@@ -22,13 +159,83 @@
 
 html {
     scroll-behavior: smooth;
+
+    background: var(--color-bg);
 }
 
 body {
+    position: relative;
+
+    /* свой контекст наложения: фон со светом ламп (z-index: -1)
+       рисуется поверх фона body, но под содержимым */
+    isolation: isolate;
+
     margin: 0;
+
     background: var(--color-bg);
     color: var(--color-text);
-    font-family: Arial, sans-serif;
+    font-family: var(--font-body);
+
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Фон: тёплый свет ламп и мягкая виньетка */
+
+body::before {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(ellipse 70% 55% at 88% -5%, rgba(214, 150, 72, 0.13), transparent 65%),
+        radial-gradient(ellipse 55% 45% at -5% 45%, rgba(150, 95, 45, 0.08), transparent 70%),
+        radial-gradient(ellipse 60% 50% at 70% 105%, rgba(198, 164, 106, 0.06), transparent 70%),
+        radial-gradient(ellipse 120% 90% at 50% 50%, transparent 55%, rgba(0, 0, 0, 0.55) 100%);
+}
+
+/* Плёночное зерно поверх всего сайта */
+
+body::after {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+    z-index: 9000;
+
+    pointer-events: none;
+
+    opacity: 0.07;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+h1,
+h2,
+.service-price,
+.price-value {
+    font-variant-numeric: lining-nums;
+}
+
+h1,
+h2 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+}
+
+h1 em,
+h2 em {
+    font-style: italic;
+    color: var(--color-accent);
+}
+
+::selection {
+    background: var(--color-accent);
+    color: var(--color-bg);
 }
 
 a {
@@ -37,7 +244,7 @@ a {
 }
 
 :focus-visible {
-    outline: 2px solid var(--color-text);
+    outline: 2px solid var(--color-accent);
     outline-offset: 3px;
 }
 
@@ -56,12 +263,26 @@ body.booking-open {
     justify-content: space-between;
 
     border-bottom: 1px solid var(--color-line);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    background: rgba(14, 12, 10, 0.78);
+
+    backdrop-filter: blur(14px);
+
+    -webkit-backdrop-filter: blur(14px);
 }
 
 .logo {
     font-size: 24px;
-    font-weight: 800;
-    letter-spacing: 2px;
+    font-weight: 600;
+    letter-spacing: 6px;
+
+    font-family: var(--font-display);
 }
 
 .nav {
@@ -71,7 +292,7 @@ body.booking-open {
 }
 
 .nav a {
-    color: #aaa6a0;
+    color: var(--color-text-soft);
     font-size: 14px;
     transition: color 0.3s ease;
 }
@@ -83,8 +304,8 @@ body.booking-open {
 .header-button {
     padding: 13px 20px;
 
-    background: var(--color-text);
-    color: var(--color-bg);
+    background: linear-gradient(135deg, #d8bb83 0%, #c6a46a 45%, #a8854d 100%);
+    color: #16110b;
 
     font-size: 13px;
     font-weight: 700;
@@ -95,7 +316,9 @@ body.booking-open {
 
 .header-button:hover {
     transform: translateY(-2px);
-    background: var(--color-white);
+    background: linear-gradient(135deg, #e6cd9b 0%, #d3b37a 45%, #b8955b 100%);
+
+    box-shadow: 0 10px 30px rgba(198, 164, 106, 0.18);
 }
 /* HERO */
 
@@ -117,18 +340,23 @@ body.booking-open {
 .hero-label {
     margin: 0 0 25px;
 
-    color: #a39d94;
+    color: var(--color-accent);
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 3px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
 }
 
 .hero h1 {
     margin: 0;
 
     font-size: clamp(52px, 6vw, 88px);
-    line-height: 0.95;
-    letter-spacing: -4.5px;
+    line-height: 1.02;
     font-weight: 700;
     max-width:650px;
 }
@@ -162,24 +390,28 @@ body.booking-open {
 }
 
 .button-light {
-    background: var(--color-text);
-    color: var(--color-bg);
+    background: linear-gradient(135deg, #d8bb83 0%, #c6a46a 45%, #a8854d 100%);
+    color: #16110b;
 }
 
 .button-light:hover {
-    background: var(--color-white);
+    background: linear-gradient(135deg, #e6cd9b 0%, #d3b37a 45%, #b8955b 100%);
     transform: translateY(-3px);
+
+    box-shadow: 0 10px 30px rgba(198, 164, 106, 0.18);
 }
 
 .button-outline {
-    border: 1px solid var(--color-border-hover);
+    border: 1px solid rgba(198, 164, 106, 0.45);
     color: var(--color-text);
 }
 
 .button-outline:hover {
-    background: var(--color-text);
-    color: var(--color-bg);
+    background: var(--color-accent);
+    color: #16110b;
     transform: translateY(-3px);
+
+    border-color: var(--color-accent);
 }
 
 /* HERO IMAGE */
@@ -203,18 +435,32 @@ body.booking-open {
         0 0 0 1px rgba(255, 255, 255, 0.04);
 }
 
+.hero-image::before {
+    content: "";
+
+    position: absolute;
+    inset: 14px;
+    z-index: 1;
+
+    pointer-events: none;
+
+    border: 1px solid rgba(220, 192, 138, 0.35);
+}
+
 .hero-image::after {
     content: "PEAKY";
     position: absolute;
-    bottom: 25px;
-    left: 25px;
+    bottom: 32px;
+    left: 34px;
 
-    color: var(--color-white);
+    color: var(--color-accent-strong);
     font-size: 11px;
     letter-spacing: 4px;
     font-weight: 700;
 
     opacity: 0.8;
+
+    z-index: 1;
 }
 
 .hero-image img {
@@ -228,6 +474,8 @@ body.booking-open {
     transition:
         transform 0.7s ease,
         filter 0.7s ease;
+
+    filter: saturate(0.9) contrast(1.05);
 }
 
 .hero-image:hover img {
@@ -235,6 +483,12 @@ body.booking-open {
 }
 
 /* INTRO */
+
+.services-preview,
+.barbers-preview,
+.price-section {
+    background: linear-gradient(180deg, rgba(198, 164, 106, 0.035), rgba(198, 164, 106, 0) 55%);
+}
 
 .intro,
 .services-preview,
@@ -251,13 +505,31 @@ body.booking-open {
     gap: 60px;
 }
 
+.section-label::before,
+.hero-label::before {
+    content: "";
+
+    width: 28px;
+    height: 1px;
+
+    flex-shrink: 0;
+
+    background: var(--color-accent);
+}
+
 .section-label {
     margin: 8px 0 0;
 
-    color: var(--color-text-muted);
+    color: var(--color-accent);
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 3px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
 }
 
 .intro h2 {
@@ -265,7 +537,6 @@ body.booking-open {
 
     font-size: clamp(40px, 5vw, 68px);
     line-height: 1;
-    letter-spacing: -3px;
 }
 
 .intro-content {
@@ -295,7 +566,7 @@ body.booking-open {
 }
 
 .feature-number {
-    color: var(--color-text-muted);
+    color: var(--color-accent);
     font-size: 11px;
     letter-spacing: 2px;
 }
@@ -335,7 +606,6 @@ body.booking-open {
 
     font-size: clamp(40px, 5vw, 68px);
     line-height: 1;
-    letter-spacing: -3px;
 }
 
 .services-link,
@@ -397,13 +667,13 @@ body.booking-open {
 }
 
 .service-card:hover {
-    background: #181715;
+    background: var(--color-accent-soft);
     transform: translateY(-4px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
 }
 
 .service-number {
-    color: var(--color-text-muted);
+    color: var(--color-accent);
     font-size: 11px;
     letter-spacing: 2px;
 }
@@ -425,10 +695,12 @@ body.booking-open {
 }
 
 .service-price {
-    color: var(--color-text);
+    color: var(--color-accent-strong);
     font-size: 18px;
     font-weight: 600;
     white-space: nowrap;
+
+    font-family: var(--font-display);
 }
 
 .services-note {
@@ -599,7 +871,7 @@ body.booking-open {
 }
 
 .barber-info > span {
-    color: var(--color-text-faint);
+    color: var(--color-accent);
     font-size: 11px;
     letter-spacing: 2px;
 }
@@ -643,7 +915,6 @@ body.booking-open {
 
     font-size: clamp(42px, 5vw, 68px);
     line-height: 1;
-    letter-spacing: -3px;
 }
 
 .about-text {
@@ -689,8 +960,7 @@ body.booking-open {
     margin: 25px 0 40px;
 
     font-size: clamp(46px, 6vw, 82px);
-    line-height: 0.95;
-    letter-spacing: -4px;
+    line-height: 1.02;
 }
 
 .contact-button {
@@ -698,8 +968,8 @@ body.booking-open {
 
     padding: 16px 28px;
 
-    background: var(--color-text);
-    color: var(--color-bg);
+    background: linear-gradient(135deg, #d8bb83 0%, #c6a46a 45%, #a8854d 100%);
+    color: #16110b;
 
     font-size: 13px;
     font-weight: 700;
@@ -709,8 +979,10 @@ body.booking-open {
 }
 
 .contact-button:hover {
-    background: var(--color-white);
+    background: linear-gradient(135deg, #e6cd9b 0%, #d3b37a 45%, #b8955b 100%);
     transform: translateY(-3px);
+
+    box-shadow: 0 10px 30px rgba(198, 164, 106, 0.18);
 }
 
 /* CONTACT INFO */
@@ -781,8 +1053,7 @@ body.booking-open {
     margin: 30px 0 0;
 
     font-size: clamp(64px, 9vw, 130px);
-    line-height: 0.88;
-    letter-spacing: -6px;
+    line-height: 1.02;
 }
 
 /* PRICE */
@@ -836,7 +1107,7 @@ body.booking-open {
 }
 
 .price-number {
-    color: var(--color-text-faint);
+    color: var(--color-accent);
 
     font-size: 11px;
     letter-spacing: 2px;
@@ -861,12 +1132,14 @@ body.booking-open {
 }
 
 .price-value {
-    color: var(--color-text);
+    color: var(--color-accent-strong);
 
     font-size: 20px;
     font-weight: 600;
 
     white-space: nowrap;
+
+    font-family: var(--font-display);
 }
 
 .price-note {
@@ -920,7 +1193,7 @@ body.booking-open {
 
     border: 1px solid var(--color-border);
 
-    background: var(--color-surface);
+    background: linear-gradient(160deg, #1b1611, #120f0c);
 
     transition: transform 0.3s ease,
                 border-color 0.3s ease;
@@ -932,7 +1205,7 @@ body.booking-open {
 }
 
 .offer-number {
-    color: var(--color-text-faint);
+    color: var(--color-accent);
 
     font-size: 11px;
     letter-spacing: 2px;
@@ -1025,7 +1298,7 @@ body.booking-open {
 }
 
 .barber-page-number {
-    color: var(--color-text-faint);
+    color: var(--color-accent);
 
     font-size: 11px;
     letter-spacing: 2px;
@@ -1036,7 +1309,6 @@ body.booking-open {
 
     font-size: clamp(34px, 4vw, 56px);
     line-height: 1;
-    letter-spacing: -2px;
 }
 
 .barber-page-info > div > p {
@@ -1102,7 +1374,7 @@ body.booking-open {
 }
 
 .work-caption span {
-    color: var(--color-text-faint);
+    color: var(--color-accent);
 
     font-size: 11px;
     letter-spacing: 2px;
@@ -1132,8 +1404,7 @@ body.booking-open {
     margin: 30px 0 0;
 
     font-size: clamp(64px, 9vw, 130px);
-    line-height: 0.88;
-    letter-spacing: -6px;
+    line-height: 1.02;
 }
 
 .about-page-intro {
@@ -1167,8 +1438,7 @@ body.booking-open {
     margin: 30px 0;
 
     font-size: clamp(42px, 5vw, 70px);
-    line-height: 0.95;
-    letter-spacing: -3px;
+    line-height: 1.02;
 }
 
 .about-story-content > p:not(.section-label) {
@@ -1196,8 +1466,7 @@ body.booking-open {
     margin: 30px 0 0;
 
     font-size: clamp(42px, 5vw, 70px);
-    line-height: 0.95;
-    letter-spacing: -3px;
+    line-height: 1.02;
 }
 
 .about-values-list {
@@ -1215,7 +1484,7 @@ body.booking-open {
 }
 
 .about-value > span {
-    color: var(--color-text-faint);
+    color: var(--color-accent);
 
     font-size: 11px;
     letter-spacing: 2px;
@@ -1275,8 +1544,7 @@ body.booking-open {
     margin: 30px 0 40px;
 
     font-size: clamp(42px, 5vw, 70px);
-    line-height: 0.95;
-    letter-spacing: -3px;
+    line-height: 1.02;
 }
 /* CONTACTS PAGE */
 
@@ -1298,14 +1566,13 @@ body.booking-open {
     margin: 30px 0 0;
 
     font-size: clamp(64px, 9vw, 130px);
-    line-height: 0.88;
-    letter-spacing: -6px;
+    line-height: 1.02;
 }
 
 .contact-description {
     max-width: 430px;
 
-    margin: 30px 0 0;
+    margin: 30px 0 35px;
 
     color: var(--color-text-soft);
 
@@ -1372,8 +1639,7 @@ body.booking-open {
     margin: 30px 0 0;
 
     font-size: clamp(50px, 6vw, 90px);
-    line-height: 0.9;
-    letter-spacing: -4px;
+    line-height: 1.02;
 }
 
 /* FOOTER */
@@ -1391,15 +1657,19 @@ body.booking-open {
     color: var(--color-text-faint);
 
     font-size: 12px;
+
+    background: rgba(0, 0, 0, 0.25);
 }
 
 .footer-logo {
     color: var(--color-text);
 
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 600;
 
-    letter-spacing: 2px;
+    letter-spacing: 5px;
+
+    font-family: var(--font-display);
 }
 
 .footer p {
@@ -1521,6 +1791,8 @@ body.booking-open {
     /* HEADER */
 
     .header {
+        position: relative;
+
         min-height: auto;
 
         padding: 20px;
@@ -1638,7 +1910,6 @@ body.booking-open {
     .barbers-page-hero h1,
     .works-page-hero h1 {
         font-size: clamp(48px, 14vw, 75px);
-        letter-spacing: -3px;
     }
 
     .intro-top,
@@ -1752,8 +2023,6 @@ body.booking-open {
 
     .hero h1 {
         font-size: clamp(48px, 15vw, 70px);
-
-        letter-spacing: -3px;
     }
 
     .hero-description {
@@ -1786,7 +2055,6 @@ body.booking-open {
     .about-content h2 {
         font-size: 36px;
         line-height: 1.05;
-        letter-spacing: -2px;
     }
 
     .about-text {
@@ -1820,8 +2088,6 @@ body.booking-open {
 
     .about-page-hero h1 {
         font-size: clamp(50px, 15vw, 75px);
-
-        letter-spacing: -4px;
     }
 
     .about-page-intro {
@@ -1909,8 +2175,6 @@ gap: 55px;
 
     .contact-intro h1 {
         font-size: clamp(50px, 15vw, 75px);
-
-        letter-spacing: -4px;
     }
 
     .contact-description {
@@ -2034,7 +2298,7 @@ body {
     width: 0;
     height: 1px;
 
-    background: var(--color-text);
+    background: var(--color-accent);
 
     transition: width 0.3s ease;
 }
@@ -2070,6 +2334,8 @@ body {
     transition:
         transform 0.7s ease,
         filter 0.7s ease;
+
+    filter: saturate(0.88) contrast(1.05);
 }
 
 .work-small:hover .media-fill,
@@ -2078,6 +2344,7 @@ body {
 .about-final-photo:hover .media-fill,
 .barber-page-photo:hover .media-fill {
     transform: scale(1.04);
+    filter: saturate(1) contrast(1.05);
 }
 
 /* CARDS */
@@ -2185,9 +2452,9 @@ body {
 
     padding: 55px 50px 45px;
 
-    background: #151412;
+    background: linear-gradient(160deg, #1c1712, #110e0b);
 
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--color-border-strong);
 
     box-shadow:
         0 30px 80px rgba(0, 0, 0, 0.55);
@@ -2242,7 +2509,7 @@ body {
 .booking-label {
     margin: 0 0 22px;
 
-    color: #a39d94;
+    color: var(--color-accent);
 
     font-size: 11px;
     font-weight: 700;
@@ -2257,9 +2524,7 @@ body {
 
     font-size: clamp(38px, 5vw, 54px);
 
-    line-height: 0.98;
-
-    letter-spacing: -2px;
+    line-height: 1.02;
 }
 
 .booking-text {
@@ -2320,7 +2585,7 @@ body {
 .booking-action:hover {
     transform: translateY(-3px);
 
-    border-color: var(--color-border-hover);
+    border-color: var(--color-accent);
 
     background: #211f1c;
 }
@@ -2469,13 +2734,13 @@ body {
     width: 52px;
     height: 52px;
 
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(198, 164, 106, 0.4);
     border-radius: 50%;
 
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(14, 12, 10, 0.6);
     backdrop-filter: blur(10px);
 
-    color: var(--color-white);
+    color: var(--color-accent-strong);
     font-size: 24px;
 
     display: flex;
