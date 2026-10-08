@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tsum323.github.io/peaky-barbers/sitemap.xml
+# Демо-версия закрыта от индексации мета-тегом noindex на каждой странице.
+# Обход не запрещён намеренно: иначе поисковик не увидит noindex.
+# После подписания договора верните строку:
+# Sitemap: https://tsum323.github.io/peaky-barbers/sitemap.xml
