@@ -316,7 +316,6 @@ body.booking-open {
 }
 /* SERVICES PREVIEW */
 
-
 .services-heading,
 .works-heading,
 .reviews-heading,
@@ -341,6 +340,7 @@ body.booking-open {
 
 .services-link,
 .works-link,
+.reviews-link,
 .barbers-link {
     padding-bottom: 8px;
 
@@ -355,6 +355,7 @@ body.booking-open {
 
 .services-link:hover,
 .works-link:hover,
+.reviews-link:hover,
 .barbers-link:hover {
     color: var(--color-white);
     border-color: var(--color-white);
@@ -438,11 +439,6 @@ body.booking-open {
 }
 /* WORKS PREVIEW */
 
-
-
-
-
-
 /* WORKS GRID */
 
 .works-grid {
@@ -519,108 +515,26 @@ body.booking-open {
 }
 /* REVIEWS */
 
-
-
-
-.reviews-rating {
-    display: flex;
-    align-items: flex-end;
-    gap: 15px;
-}
-
-.reviews-rating strong {
-    font-size: 42px;
-    line-height: 1;
-}
-
-.reviews-rating span {
-    color: var(--color-text-muted);
-    font-size: 12px;
-}
-
-/* REVIEW CARDS */
-
-.reviews-grid {
+.reviews-widget {
     margin-top: 80px;
+    max-width: 760px;
+    height: 800px;
 
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.review-card {
-    min-height: 300px;
-    padding: 34px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    position: relative;
     overflow: hidden;
 
     border: 1px solid var(--color-border);
-    background: var(--color-surface);
-
-    transition:
-        transform 0.4s ease,
-        background 0.4s ease,
-        border-color 0.4s ease,
-        box-shadow 0.4s ease;
-}
-.review-card:hover {
-    transform: translateY(-5px);
-    background: #1b1a18;
-    border-color: #4a4641;
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
 }
 
-.review-mark {
-    color: var(--color-text-muted);
-    font-size: 46px;
-    line-height: 0.8;
-    opacity: 0.7;
+.reviews-widget iframe {
+    display: block;
 
-    transition:
-        transform 0.4s ease,
-        opacity 0.4s ease;
-}
-.review-card:hover .review-mark {
-    transform: translateY(-3px);
-    opacity: 1;
+    width: 100%;
+    height: 100%;
+
+    border: 0;
 }
 
-.review-card p {
-    margin: 30px 0;
-
-    color: #c1bcb5;
-    font-size: 16px;
-    line-height: 1.7;
-    letter-spacing: 0.1px;
-}
-
-.review-author {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.review-author strong {
-    font-size: 11px;
-    letter-spacing: 2px;
-    font-weight:700;
-}
-
-.review-author span {
-    color: var(--color-text-faint);
-    font-size: 11px;
-}
 /* BARBERS */
-
-
-
-
-
 
 /* BARBER CARDS */
 
@@ -871,7 +785,6 @@ body.booking-open {
     letter-spacing: -6px;
 }
 
-
 /* PRICE */
 
 .price-section {
@@ -978,7 +891,6 @@ body.booking-open {
     align-items: end;
 }
 
-
 .offers-description {
     max-width: 430px;
 
@@ -1048,8 +960,6 @@ body.booking-open {
     letter-spacing: 2px;
 }
 /* BARBERS PAGE */
-
-
 
 .services-page-description,
 .barbers-page-description,
@@ -1145,9 +1055,6 @@ body.booking-open {
     line-height: 1.7;
 }
 /* WORKS PAGE */
-
-
-
 
 /* GALLERY */
 
@@ -1752,7 +1659,7 @@ body.booking-open {
 
     .services-grid,
     .works-grid,
-    .reviews-grid,
+    .reviews-widget,
     .barbers-grid,
     .price-list,
     .offers-grid {
@@ -1794,7 +1701,6 @@ body.booking-open {
 
     .services-grid,
     .works-grid,
-    .reviews-grid,
     .barbers-grid,
     .offers-grid,
     .works-gallery {
@@ -1803,6 +1709,10 @@ body.booking-open {
 
     .works-gallery {
         gap: 20px;
+    }
+
+    .reviews-widget {
+        height: 640px;
     }
 
     .intro-content {
