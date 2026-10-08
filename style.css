@@ -101,7 +101,7 @@ a {
 
     font-size: clamp(52px, 6vw, 88px);
     line-height: 0.95;
-    letter-spacing: -4,5px;
+    letter-spacing: -4.5px;
     font-weight: 700;
     max-width:650px;
 }
@@ -984,7 +984,7 @@ a {
 @media (max-width: 700px) {
     .contact-preview {
         padding: 80px 25px;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         gap: 30px;
         }
 }
@@ -1955,6 +1955,93 @@ a {
 
 @media (max-width: 700px) {
 
+    /* SECTIONS */
+
+    .intro,
+    .services-preview,
+    .works-preview,
+    .reviews-preview,
+    .barbers-preview,
+    .price-section,
+    .offers-section,
+    .barbers-page-list,
+    .works-gallery {
+        padding: 70px 20px;
+    }
+
+    .services-page-hero,
+    .barbers-page-hero,
+    .works-page-hero {
+        padding: 70px 20px 80px;
+    }
+
+    .services-page-hero h1,
+    .barbers-page-hero h1,
+    .works-page-hero h1 {
+        font-size: clamp(48px, 14vw, 75px);
+        letter-spacing: -3px;
+    }
+
+    .intro-top,
+    .price-heading,
+    .offers-heading {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .services-heading,
+    .works-heading,
+    .reviews-heading,
+    .barbers-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .services-grid,
+    .works-grid,
+    .reviews-grid,
+    .barbers-grid,
+    .price-list,
+    .offers-grid {
+        margin-top: 50px;
+    }
+
+    .works-gallery {
+        margin-top: 0;
+    }
+
+    /* SERVICE CARDS */
+
+    .service-card {
+        min-height: auto;
+        padding: 25px 0;
+
+        grid-template-columns: 40px 1fr;
+        gap: 10px 15px;
+    }
+
+    .service-price {
+        grid-column: 2;
+    }
+
+    .service-card:nth-child(odd) {
+        border-right: none;
+    }
+
+    /* PRICE */
+
+    .price-item {
+        min-height: auto;
+
+        grid-template-columns: 40px 1fr;
+        gap: 10px 15px;
+    }
+
+    .price-value {
+        grid-column: 2;
+    }
+
     /* HEADER */
 
     .header {
@@ -2262,6 +2349,8 @@ gap: 55px;
         height: 100% !important;
 
         object-fit: cover !important;
+
+        transform: none;
     }
 
     .image-placeholder {
