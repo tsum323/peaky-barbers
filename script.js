@@ -1,26 +1,28 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    const bookingLinks = document.querySelectorAll(
-        'a[href="#"]'
-    );
+    const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    /* ========================================
+       BOOKING MODAL
+    ======================================== */
+
+    const bookingLinks = document.querySelectorAll("[data-booking]");
 
     bookingLinks.forEach(function (link) {
 
-        if (link.textContent.trim().includes("Записаться")) {
+        link.addEventListener("click", function (event) {
 
-            link.addEventListener("click", function (event) {
+            event.preventDefault();
 
-                event.preventDefault();
+            openBookingModal(link);
 
-                openBookingModal();
-
-            });
-
-        }
+        });
 
     });
 
-    function openBookingModal() {
+    function openBookingModal(opener) {
 
         if (document.querySelector(".booking-modal")) {
             return;
@@ -34,9 +36,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
             <div class="booking-overlay"></div>
 
-            <div class="booking-window">
+            <div
+                class="booking-window"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="booking-title"
+            >
 
-                <button class="booking-close">
+                <button
+                    type="button"
+                    class="booking-close"
+                    aria-label="Закрыть"
+                >
                     ×
                 </button>
 
@@ -44,10 +55,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     PEAKY BARBERS
                 </p>
 
-                <h2>
+                <h2 id="booking-title">
                     Записаться
-                    
-
                     в Peaky
                 </h2>
 
@@ -70,6 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <a
                         href="https://wa.me/79673127911"
                         target="_blank"
+                        rel="noopener noreferrer"
                         class="booking-action booking-whatsapp"
                     >
                         <span>WHATSAPP</span>
@@ -86,154 +96,195 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
 
         document.body.appendChild(modal);
+        document.body.classList.add("booking-open");
 
         setTimeout(function () {
             modal.classList.add("booking-modal-visible");
         }, 10);
 
-        const closeButton =
-            modal.querySelector(".booking-close");
+        const closeButton = modal.querySelector(".booking-close");
+        const overlay = modal.querySelector(".booking-overlay");
+        const focusable = modal.querySelectorAll("button, a[href]");
+        const firstFocusable = focusable[0];
+        const lastFocusable = focusable[focusable.length - 1];
 
-        const overlay =
-            modal.querySelector(".booking-overlay");
+        closeButton.focus();
 
-        closeButton.addEventListener(
-            "click",
-            closeBookingModal
-        );
+        closeButton.addEventListener("click", closeBookingModal);
+        overlay.addEventListener("click", closeBookingModal);
+        document.addEventListener("keydown", handleKeydown);
 
-        overlay.addEventListener(
-            "click",
-            closeBookingModal
-        );
-
-        document.addEventListener(
-            "keydown",
-            handleEscape
-        );
-
-        function handleEscape(event) {
+        function handleKeydown(event) {
 
             if (event.key === "Escape") {
                 closeBookingModal();
+                return;
+            }
+
+            /* Фокус не уходит за пределы окна */
+
+            if (event.key === "Tab") {
+
+                if (event.shiftKey && document.activeElement === firstFocusable) {
+                    event.preventDefault();
+                    lastFocusable.focus();
+                } else if (!event.shiftKey && document.activeElement === lastFocusable) {
+                    event.preventDefault();
+                    firstFocusable.focus();
+                }
+
             }
 
         }
 
         function closeBookingModal() {
 
-            modal.classList.remove(
-                "booking-modal-visible"
-            );
+            modal.classList.remove("booking-modal-visible");
+
+            document.removeEventListener("keydown", handleKeydown);
+            document.body.classList.remove("booking-open");
 
             setTimeout(function () {
-
                 modal.remove();
-
             }, 350);
 
-            document.removeEventListener(
-                "keydown",
-                handleEscape
-            );
-
-        }
-
-    }
-    
-    /* ========================================
-   ACTIVE NAVIGATION
-======================================== */
-
-let currentPage =
-    window.location.pathname.split("/").pop();
-
-/* Главная страница */
-
-if (
-    !currentPage ||
-    currentPage === "/" ||
-    currentPage === "index"
-) {
-    currentPage = "index.html";
-}
-
-const navLinks =
-    document.querySelectorAll(".nav a");
-
-navLinks.forEach(function (link) {
-
-    const linkPage =
-        link.getAttribute("href");
-
-    if (linkPage === currentPage) {
-
-        link.classList.add("active");
-
-    }
-
-});
-/* =========================================
-   NEW SCROLL REVEAL
-========================================= */
-
-const revealItems = document.querySelectorAll(
-    "main section:not(.hero), .offer-card, .work-card, .barber-page-card, .about-block, .contact-block"
-);
-
-const revealImages = document.querySelectorAll(
-    ".image-placeholder, .barber-page-photo, .about-photo, .about-final-photo"
-);
-
-const revealObserver = new IntersectionObserver(
-    function (entries) {
-        entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("is-visible");
-                revealObserver.unobserve(entry.target);
+            if (opener) {
+                opener.focus();
             }
-        });
-    },
-    {
-        threshold: 0.15
-    }
-);
 
-revealItems.forEach(function (element, index) {
-
-    element.classList.add("reveal-on-scroll");
-
-    element.style.transitionDelay =
-        Math.min(index * 0.08, 0.32) + "s";
-
-    revealObserver.observe(element);
-});
-
-revealImages.forEach(function (element, index) {
-
-    element.classList.add("reveal-image");
-
-    element.style.transitionDelay =
-        Math.min(index * 0.06, 0.24) + "s";
-
-    revealObserver.observe(element);
-});
-const backToTop = document.querySelector('.back-to-top');
-
-if (backToTop) {
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 400) {
-            backToTop.classList.add('show');
-        } else {
-            backToTop.classList.remove('show');
         }
+
+    }
+
+    /* ========================================
+       ACTIVE NAVIGATION
+    ======================================== */
+
+    let currentPage = window.location.pathname.split("/").pop();
+
+    /* Главная страница и адреса без .html */
+
+    if (!currentPage) {
+        currentPage = "index.html";
+    } else if (!currentPage.includes(".")) {
+        currentPage += ".html";
+    }
+
+    const navLinks = document.querySelectorAll(".nav a");
+
+    navLinks.forEach(function (link) {
+
+        if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active");
+            link.setAttribute("aria-current", "page");
+        }
+
     });
 
-    backToTop.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+    /* ========================================
+       SCROLL REVEAL
+    ======================================== */
+
+    /* Карточки появляются по отдельности,
+       поэтому их секции целиком не анимируются */
+
+    const revealCards = ".offer-card, .barber-page-card";
+
+    const revealSections = Array.from(
+        document.querySelectorAll("main section:not(.hero)")
+    ).filter(function (section) {
+        return !section.querySelector(revealCards);
     });
-};
+
+    const revealImages = document.querySelectorAll(
+        ".barber-page-photo, .about-photo, .about-final-photo"
+    );
+
+    const revealObserver = new IntersectionObserver(
+        function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("is-visible");
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        },
+        {
+            threshold: 0.15
+        }
+    );
+
+    /* Задержка считается внутри группы соседних элементов */
+
+    function siblingIndex(element, list) {
+        return Array.from(element.parentElement.children)
+            .filter(function (child) {
+                return list.includes(child);
+            })
+            .indexOf(element);
+    }
+
+    function setupReveal(elements, className, step, maxDelay) {
+
+        const list = Array.from(elements);
+
+        list.forEach(function (element) {
+
+            element.classList.add(className);
+
+            element.style.transitionDelay =
+                Math.min(siblingIndex(element, list) * step, maxDelay) + "s";
+
+            /* После появления возвращаем элементу
+               его собственные transition для hover */
+
+            element.addEventListener("transitionend", function cleanup(event) {
+
+                if (event.target !== element || event.propertyName !== "opacity") {
+                    return;
+                }
+
+                element.classList.remove(className, "is-visible");
+                element.style.transitionDelay = "";
+                element.removeEventListener("transitionend", cleanup);
+
+            });
+
+            revealObserver.observe(element);
+
+        });
+
+    }
+
+    if (!reduceMotion) {
+        setupReveal(revealSections, "reveal-on-scroll", 0, 0);
+        setupReveal(document.querySelectorAll(revealCards), "reveal-on-scroll", 0.08, 0.32);
+        setupReveal(revealImages, "reveal-image", 0.06, 0.24);
+    }
+
+    /* ========================================
+       BACK TO TOP
+    ======================================== */
+
+    const backToTop = document.querySelector(".back-to-top");
+
+    if (backToTop) {
+
+        function toggleBackToTop() {
+            backToTop.classList.toggle("show", window.scrollY > 400);
+        }
+
+        toggleBackToTop();
+
+        window.addEventListener("scroll", toggleBackToTop, { passive: true });
+
+        backToTop.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: reduceMotion ? "auto" : "smooth"
+            });
+        });
+
+    }
+
 });
