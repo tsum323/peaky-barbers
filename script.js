@@ -24,8 +24,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function openBookingModal(opener) {
 
-        if (document.querySelector(".booking-modal")) {
-            return;
+        const existing = document.querySelector(".booking-modal");
+
+        if (existing) {
+
+            /* Окно ещё открыто — второй клик ничего не делает.
+               Окно в процессе закрытия — убираем его сразу и открываем заново */
+
+            if (!existing.classList.contains("is-closing")) {
+                return;
+            }
+
+            existing.remove();
         }
 
         const modal = document.createElement("div");
@@ -95,11 +105,20 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
         `;
 
+        const openedAt = Date.now();
+        const scrollY = window.scrollY;
+
         document.body.appendChild(modal);
+
+        /* Блокируем прокрутку под окном (в том числе в iOS Safari) */
+
+        document.body.style.top = -scrollY + "px";
         document.body.classList.add("booking-open");
 
         setTimeout(function () {
-            modal.classList.add("booking-modal-visible");
+            if (!modal.classList.contains("is-closing")) {
+                modal.classList.add("booking-modal-visible");
+            }
         }, 10);
 
         const closeButton = modal.querySelector(".booking-close");
@@ -111,7 +130,15 @@ document.addEventListener("DOMContentLoaded", function () {
         closeButton.focus();
 
         closeButton.addEventListener("click", closeBookingModal);
-        overlay.addEventListener("click", closeBookingModal);
+
+        /* Второй клик двойного нажатия по «Записаться» попадает
+           на затемнение — его не считаем закрытием */
+
+        overlay.addEventListener("click", function () {
+            if (Date.now() - openedAt > 400) {
+                closeBookingModal();
+            }
+        });
         document.addEventListener("keydown", handleKeydown);
 
         function handleKeydown(event) {
@@ -139,22 +166,53 @@ document.addEventListener("DOMContentLoaded", function () {
 
         function closeBookingModal() {
 
+            if (modal.classList.contains("is-closing")) {
+                return;
+            }
+
+            modal.classList.add("is-closing");
             modal.classList.remove("booking-modal-visible");
 
             document.removeEventListener("keydown", handleKeydown);
             document.body.classList.remove("booking-open");
+            document.body.style.top = "";
+            window.scrollTo({ top: scrollY, behavior: "instant" });
 
             setTimeout(function () {
                 modal.remove();
             }, 350);
 
             if (opener) {
-                opener.focus();
+                opener.focus({ preventScroll: true });
             }
 
         }
 
     }
+
+    /* ========================================
+       MAP: прокрутка страницы не застревает на карте
+    ======================================== */
+
+    document.querySelectorAll(".map-wrap").forEach(function (wrap) {
+
+        const shield = wrap.querySelector(".map-shield");
+
+        if (shield) {
+            shield.addEventListener("click", function () {
+                wrap.classList.add("is-active");
+            });
+        }
+
+    });
+
+    /* ========================================
+       FOOTER YEAR
+    ======================================== */
+
+    document.querySelectorAll("[data-year]").forEach(function (el) {
+        el.textContent = new Date().getFullYear();
+    });
 
     /* ========================================
        ACTIVE NAVIGATION

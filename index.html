@@ -13,12 +13,48 @@
     <meta property="og:title" content="Peaky Barbers — барбершоп в Краснодаре">
     <meta property="og:description" content="Peaky Barbers — мужской барбершоп в Краснодаре. Стрижки, моделирование бороды и стиль в атмосфере Peaky.">
 
+    <meta property="og:url" content="https://tsum323.github.io/peaky-barbers/">
+    <meta property="og:image" content="https://tsum323.github.io/peaky-barbers/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Барбер Peaky Barbers оформляет бороду клиенту">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="canonical" href="https://tsum323.github.io/peaky-barbers/">
+    <meta name="theme-color" content="#0e0c0a">
+
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="preload" href="fonts/playfair-display-cyrillic-500-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/manrope-cyrillic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=20261008">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HairSalon",
+        "name": "Peaky Barbers",
+        "description": "Мужской барбершоп в Краснодаре: стрижки, моделирование бороды, детские стрижки.",
+        "url": "https://tsum323.github.io/peaky-barbers/",
+        "image": "https://tsum323.github.io/peaky-barbers/images/og-image.jpg",
+        "logo": "https://tsum323.github.io/peaky-barbers/apple-touch-icon.png",
+        "telephone": "+7 967 312-79-11",
+        "priceRange": "800–1900 ₽",
+        "currenciesAccepted": "RUB",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ул. имени 40-летия Победы, 18",
+            "addressLocality": "Краснодар",
+            "addressCountry": "RU"
+        },
+        "hasMap": "https://yandex.ru/maps/org/peaky_barbers/162378804419/",
+        "sameAs": ["https://yandex.ru/maps/org/peaky_barbers/162378804419/"]
+    }
+    </script>
 </head>
 <body>
+
+    <a href="#main" class="skip-link">Перейти к содержимому</a>
 
     <header class="header">
 
@@ -37,7 +73,7 @@
 
     </header>
 
-    <main>
+    <main id="main">
 
         <section class="hero">
 
@@ -443,21 +479,23 @@
 
     <footer class="footer">
 
-        <div class="footer-logo">
-            PEAKY
+        <div class="footer-brand">
+            <a href="index.html" class="footer-logo">PEAKY</a>
+            <p>Мужской барбершоп в Краснодаре</p>
         </div>
 
-        <p>
-            Барбершоп в Краснодаре
-        </p>
+        <address class="footer-contacts">
+            <a href="https://yandex.ru/maps/org/peaky_barbers/162378804419/" target="_blank" rel="noopener noreferrer">Краснодар, ул. имени 40-летия Победы, 18</a>
+            <a href="tel:+79673127911">+7 967 312 79 11</a>
+        </address>
 
-        <a href="contacts.html">
-            Контакты
-        </a>
+        <a href="contacts.html" class="footer-cta" data-booking>Записаться →</a>
+
+        <p class="footer-copy">© <span data-year>2026</span> Peaky Barbers</p>
 
     </footer>
 <button class="back-to-top" aria-label="Вернуться наверх">↑</button>
 
-<script src="script.js"></script>
+<script src="script.js?v=20261008"></script>
 </body>
 </html>
