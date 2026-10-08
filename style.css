@@ -185,8 +185,6 @@ body.booking-open {
 /* HERO IMAGE */
 
 .hero-image {
-    --hero-zoom: 1.35;
-
     position: relative;
 
     width: 100%;
@@ -224,10 +222,8 @@ body.booking-open {
     height: 100%;
     display: block;
 
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
-
-    transform: scale(var(--hero-zoom));
 
     transition:
         transform 0.7s ease,
@@ -235,7 +231,7 @@ body.booking-open {
 }
 
 .hero-image:hover img {
-    transform: scale(calc(var(--hero-zoom) * 1.04));
+    transform: scale(1.04);
 }
 
 /* INTRO */
@@ -1418,38 +1414,36 @@ body.booking-open {
     border-bottom: 1px solid var(--color-line);
 }
 
-.map-placeholder {
-    min-height: 500px;
+.map-frame {
+    display: block;
 
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    height: 500px;
 
     border: 1px solid var(--color-border);
 
     background: var(--placeholder-bg);
-
-    text-align: center;
 }
 
-.map-placeholder span {
-    color: var(--color-text);
+.map-link {
+    display: inline-block;
 
+    margin-top: 20px;
+    padding-bottom: 8px;
+
+    border-bottom: 1px solid var(--color-border-hover);
+
+    color: var(--color-text-soft);
     font-size: 13px;
-    font-weight: 700;
 
-    letter-spacing: 4px;
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease;
 }
 
-.map-placeholder p {
-    margin: 15px 0 0;
-
-    color: var(--color-text-faint);
-
-    font-size: 11px;
-    letter-spacing: 3px;
+.map-link:hover {
+    color: var(--color-white);
+    border-color: var(--color-white);
 }
 
 /* FINAL */
@@ -1680,15 +1674,9 @@ body.booking-open {
     }
 
     .hero-image {
-        --hero-zoom: 1;
-
         height: auto;
 
         aspect-ratio: 4 / 3;
-    }
-
-    .hero-image img {
-        object-fit: cover;
     }
 
     /* BARBERS PAGE */
@@ -2023,8 +2011,8 @@ gap: 55px;
         padding: 20px;
     }
 
-    .map-placeholder {
-        min-height: 350px;
+    .map-frame {
+        height: 350px;
     }
 
     .contact-final {
@@ -2147,23 +2135,38 @@ body {
 
 /* IMAGES */
 
+.work-small,
+.work-photo,
 .about-photo,
 .about-final-photo,
 .barber-page-photo {
+    position: relative;
     overflow: hidden;
 }
 
-.about-photo img,
-.about-final-photo img,
-.barber-page-photo img {
+/* Фото заполняет блок-заглушку целиком */
+
+.media-fill {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
     transition:
         transform 0.7s ease,
         filter 0.7s ease;
 }
 
-.about-photo:hover img,
-.about-final-photo:hover img,
-.barber-page-photo:hover img {
+.work-small:hover .media-fill,
+.work-item:hover .media-fill,
+.about-photo:hover .media-fill,
+.about-final-photo:hover .media-fill,
+.barber-page-photo:hover .media-fill {
     transform: scale(1.04);
 }
 
