@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 </p>
 
                 <h2 id="booking-title">
-                    Записаться
+                    Записаться<br>
                     в Peaky
                 </h2>
 
