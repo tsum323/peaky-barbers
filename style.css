@@ -166,8 +166,13 @@ html {
 body {
     position: relative;
 
+    /* свой контекст наложения: фон со светом ламп (z-index: -1)
+       рисуется поверх фона body, но под содержимым */
+    isolation: isolate;
+
     margin: 0;
 
+    background: var(--color-bg);
     color: var(--color-text);
     font-family: var(--font-body);
 
