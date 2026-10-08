@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://tsum323.github.io/peaky-barbers/</loc>
+        <lastmod>2026-10-08</lastmod>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://tsum323.github.io/peaky-barbers/services.html</loc>
+        <lastmod>2026-10-08</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://tsum323.github.io/peaky-barbers/barbers.html</loc>
+        <lastmod>2026-10-08</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://tsum323.github.io/peaky-barbers/works.html</loc>
+        <lastmod>2026-10-08</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://tsum323.github.io/peaky-barbers/about.html</loc>
+        <lastmod>2026-10-08</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://tsum323.github.io/peaky-barbers/contacts.html</loc>
+        <lastmod>2026-10-08</lastmod>
+        <priority>0.8</priority>
+    </url>
+</urlset>

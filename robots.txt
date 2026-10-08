@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tsum323.github.io/peaky-barbers/sitemap.xml
