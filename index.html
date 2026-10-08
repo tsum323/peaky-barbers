@@ -3,7 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Peaky Barbers-Барбершоп в Краснодаре</title>
+    <title>Peaky Barbers — барбершоп в Краснодаре</title>
+
+    <meta name="description" content="Peaky Barbers — мужской барбершоп в Краснодаре. Стрижки, моделирование бороды и стиль в атмосфере Peaky.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Peaky Barbers">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:title" content="Peaky Barbers — барбершоп в Краснодаре">
+    <meta property="og:description" content="Peaky Barbers — мужской барбершоп в Краснодаре. Стрижки, моделирование бороды и стиль в атмосфере Peaky.">
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,7 +23,7 @@
         <a href="index.html" class="logo">PEAKY</a>
 
         <nav class="nav">
-            <a href="index.html" class="active">Главная</a>
+            <a href="index.html">Главная</a>
             <a href="services.html">Услуги</a>
             <a href="barbers.html">Барберы</a>
             <a href="works.html">Работы</a>
@@ -21,7 +31,7 @@
             <a href="contacts.html">Контакты</a>
         </nav>
 
-        <a href="#" class="header-button">Записаться</a>
+        <a href="contacts.html" class="header-button" data-booking>Записаться</a>
 
     </header>
 
@@ -34,9 +44,7 @@
                 <p class="hero-label">PEAKY BARBERS · KRASNODAR</p>
 
                 <h1>
-                    Стиль начинается
-                    
-
+                    Стиль начинается<br>
                     с деталей.
                 </h1>
 
@@ -46,7 +54,7 @@
                 </p>
 
                 <div class="hero-buttons">
-                    <a href="#" class="button button-light">
+                    <a href="contacts.html" class="button button-light" data-booking>
                         Записаться
                     </a>
 
@@ -57,9 +65,9 @@
 
             </div>
 
-           <div class="hero-image">
-    <img src="images/IMG_0108.PNG" alt="Peaky Barbers">
-</div>
+            <div class="hero-image">
+                <img src="images/hero.webp" alt="Барбер Peaky Barbers оформляет бороду клиенту" width="1280" height="851" fetchpriority="high">
+            </div>
 
         </section>
 <section class="intro">
@@ -68,9 +76,7 @@
         <p class="section-label">О PEAKY</p>
 
         <h2>
-            Место, где стиль —
-            
-
+            Место, где стиль —<br>
             это привычка.
         </h2>
     </div>
@@ -125,9 +131,7 @@
             <p class="section-label">УСЛУГИ</p>
 
             <h2>
-                Всё необходимое
-                
-
+                Всё необходимое<br>
                 для твоего стиля.
             </h2>
         </div>
@@ -188,7 +192,7 @@
                 <p>Форма, контуры и аккуратное оформление</p>
             </div>
 
-            <span class="service-price">800 ₽</span>
+            <span class="service-price">800 ₽*</span>
 
         </a>
 
@@ -207,9 +211,7 @@
             <p class="section-label">РАБОТЫ</p>
 
             <h2>
-                Стиль,
-                
-
+                Стиль,<br>
                 который видно.
             </h2>
         </div>
@@ -223,25 +225,19 @@
 <div class="works-grid">
 
     <a href="works.html" class="work-small">
-        <div class="work-placeholder">
-            ФОТО СТРИЖКИ
-        </div>
+        <img class="media-fill" src="images/work-haircut.webp" alt="Мужская стрижка с фейдом и укладкой" width="960" height="1280" loading="lazy" decoding="async">
 
         <span>МУЖСКИЕ СТРИЖКИ</span>
     </a>
 
     <a href="works.html" class="work-small">
-        <div class="work-placeholder">
-            ФОТО БОРОДЫ
-        </div>
+        <img class="media-fill" src="images/work-beard.webp" alt="Оформление бороды в кресле Peaky Barbers" width="960" height="1280" loading="lazy" decoding="async">
 
         <span>ОФОРМЛЕНИЕ БОРОДЫ</span>
     </a>
 
     <a href="works.html" class="work-small">
-        <div class="work-placeholder">
-            ФОТО ДЕТСКОЙ СТРИЖКИ
-        </div>
+        <img class="media-fill" src="images/work-kids.webp" alt="Детская стрижка в Peaky Barbers" width="960" height="1280" loading="lazy" decoding="async">
 
         <span>ДЕТСКИЕ СТРИЖКИ</span>
     </a>
@@ -265,9 +261,7 @@
             <p class="section-label">ОТЗЫВЫ</p>
 
             <h2>
-                Нам доверяют
-                
-
+                Нам доверяют<br>
                 свой стиль.
             </h2>
         </div>
@@ -340,9 +334,7 @@
             <p class="section-label">КОМАНДА</p>
 
             <h2>
-                Люди,
-                
-
+                Люди,<br>
                 создающие стиль.
             </h2>
         </div>
@@ -412,7 +404,7 @@
 <section class="about-preview">
 
     <div class="about-photo">
-        ФОТО ИНТЕРЬЕРА
+        <img class="media-fill" src="images/interior.webp" alt="Интерьер барбершопа Peaky Barbers" width="960" height="1280" loading="lazy" decoding="async">
     </div>
 
     <div class="about-content">
@@ -420,9 +412,7 @@
         <p class="section-label">О PEAKY</p>
 
         <h2>
-            Больше, чем
-            
-
+            Больше, чем<br>
             просто стрижка.
         </h2>
 
@@ -446,13 +436,11 @@
         <p class="section-label">КОНТАКТЫ</p>
 
         <h2>
-            Готов к новому
-            
-
+            Готов к новому<br>
             образу?
         </h2>
 
-        <a href="#" class="contact-button">
+        <a href="contacts.html" class="contact-button" data-booking>
             Записаться
         </a>
 
@@ -463,8 +451,7 @@
         <div class="contact-item">
             <span>АДРЕС</span>
             <p>
-                Краснодар,
-
+                Краснодар,<br>
                 ул. имени 40-летия Победы, 18
             </p>
         </div>
@@ -489,8 +476,26 @@
 </section>
 
     </main>
-<script src="script.js"></script>
 
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="footer-logo">
+            PEAKY
+        </div>
+
+        <p>
+            Барбершоп в Краснодаре
+        </p>
+
+        <a href="contacts.html">
+            Контакты
+        </a>
+
+    </footer>
 <button class="back-to-top" aria-label="Вернуться наверх">↑</button>
+
+<script src="script.js"></script>
 </body>
 </html>
